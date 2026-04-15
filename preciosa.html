@@ -1,0 +1,156 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Para la Más Hermosa</title>
+    <style>
+        /* --- Configuración Global --- */
+        body, html {
+            height: 100%;
+            margin: 0;
+            font-family: 'Poppins', 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            overflow: hidden;
+        }
+
+        /* --- Fondo de Imagen Principal --- */
+        .fondo-imagen {
+            background-image: linear-gradient(rgba(0, 0, 0, 0.3), rgba(0, 0, 0, 0.5)), 
+                              url('https://images.unsplash.com/photo-1518199266791-c399a9560528?q=80&w=1920&auto=format&fit=crop');
+            height: 100%;
+            background-position: center;
+            background-repeat: no-repeat;
+            background-size: cover;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            color: white;
+            text-align: center;
+        }
+
+        /* --- Contenedor Principal (Vidrio) --- */
+        .contenedor {
+            background-color: rgba(255, 255, 255, 0.15);
+            padding: 40px;
+            border-radius: 20px;
+            backdrop-filter: blur(8px);
+            box-shadow: 0 10px 30px rgba(0,0,0,0.3);
+            border: 1px solid rgba(255,255,255,0.2);
+            max-width: 80%;
+        }
+
+        /* --- Título con Latido --- */
+        h1 {
+            font-size: 3.5em;
+            margin-bottom: 10px;
+            color: #fff;
+            text-shadow: 2px 2px 4px rgba(0,0,0,0.5);
+            animation: latido 2s infinite;
+        }
+
+        @keyframes latido {
+            0% { transform: scale(1); }
+            50% { transform: scale(1.05); }
+            100% { transform: scale(1); }
+        }
+
+        h2.subtitulo {
+            font-size: 1.5em;
+            font-weight: 300;
+            margin-top: 0;
+            margin-bottom: 30px;
+            color: #ffe0e0;
+        }
+
+        /* --- Fondo DETRÁS de la foto --- */
+        .marco-foto {
+            display: inline-block;
+            padding: 15px; /* Tamaño del fondo decorativo */
+            background: radial-gradient(circle, rgba(255, 20, 147, 0.5) 0%, rgba(255, 255, 255, 0) 70%);
+            border-radius: 50%;
+            margin-bottom: 20px;
+        }
+
+        /* --- Foto Pequeña --- */
+        .foto-pequena {
+            width: 300px; /* Tamaño pequeño para que se vea bien */
+            height: 300px;
+            object-fit: cover;
+            border-radius: 50%;
+            border: 4px solid white;
+            box-shadow: 0 8px 20px rgba(0,0,0,0.3);
+            display: block;
+        }
+
+        /* --- Frases en Movimiento --- */
+        .contenedor-movimiento {
+            width: 100%;
+            overflow: hidden;
+            background-color: rgba(255, 20, 147, 0.2);
+            padding: 15px 0;
+            border-radius: 10px;
+            margin-top: 20px;
+        }
+
+        .frases-movimiento {
+            display: flex;
+            white-space: nowrap;
+            animation: moverFrases 25s linear infinite;
+        }
+
+        .frases-movimiento p {
+            font-size: 1.3em;
+            margin: 0;
+            padding: 0 50px;
+            color: white;
+            font-style: italic;
+        }
+
+        .frases-movimiento p::after {
+            content: " ❤️ ";
+        }
+
+        @keyframes moverFrases {
+            0% { transform: translateX(100%); }
+            100% { transform: translateX(-100%); }
+        }
+
+        /* --- Ajustes para Móviles --- */
+        @media (max-width: 600px) {
+            h1 { font-size: 2.2em; }
+            h2.subtitulo { font-size: 1.1em; }
+            .contenedor { padding: 20px; max-width: 90%; }
+            .foto-pequena { width: 100px; height: 100px; }
+            .frases-movimiento p { font-size: 1em; }
+        }
+    </style>
+</head>
+<body>
+
+    <div class="fondo-imagen">
+        <div class="contenedor">
+            
+            <h1>Eres Hermosa</h1>
+            <h2 class="subtitulo">Más de lo que las palabras pueden decir</h2>
+
+            <div class="marco-foto">
+                <img src="pau.jpeg" alt="Pau" class="foto-pequena">
+            </div>
+
+            <div class="contenedor-movimiento">
+                <div class="frases-movimiento">
+                    <p>Tu sonrisa es lo mas hermoso</p>
+                    <p>Eres la casualidad más bonita</p>
+                    <p>Cada día te admiro</p>
+                    <p>Mi lugar favorito eres tu</p>
+                    <p>Gracias por existir</p>
+                    <p>Eres la musa de mis pensamientos</p>
+                    <p>Tu sonrisa ilumina el mundo</p>
+                </div>
+            </div>
+
+        </div>
+    </div>
+
+</body>
+</html>
